@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<script type="text/javascript" src="js/angular.js" ></script>
+		
+	</head>
+	<body>
+		<div ng-app="myApp">
+			<h2>Hello{{name}}</h2>
+			<div ng-controller="MyController">
+				<h1>Hello{{ControllerName}}</h1>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var app=angular.module('myApp',[]);
+		app.run(function($rootScope){
+			$rootScope.name="World";
+		})
+		app.controller('MyController',function($scope){
+			$scope.ControllerName="Ari";
+		})
+	</script>
+</html>
